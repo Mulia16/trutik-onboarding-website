@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                50: "#FF8A00",
+              },
+              second: {
+                20: "#2056D8",
+                30: "#4C53B6",
+                40: "#6533FF",
+                50: "#182469",
+                60: "#9CABFF",
+              },
+              neutral: {
+                0: "#FFFFFF",
+                10: "#FAFBFD",
+                20: "#F0F3FA",
+                30: "#E8EAEB",
+                40: "#D8D4E4",
+                50: "#848E99",
+                60: "#808080",
+                70: "#67707A",
+                80: "#4B465C",
+                90: "#1C2A3A",
+                100: "#000100",
+              },
+              success: {
+                50: "#18AC53",
+              },
+            },
+          },
+          backgroundImage: {
+            "hero-form": "url('/src/assets/images/form-hero-background.png')",
+            "get-started":
+              "url('/src/assets/images/get-started-background.png')",
+            "know-more-about-trutik":
+              "url('/src/assets/images/know-more-about-trutik.png')",
+            register: "url('/src/assets/images/register-background.png')",
+            "drop-file": `url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' stroke='%23E8EAEBFF' stroke-width='1' stroke-dasharray='5' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");`,
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://unpkg.com/@tailwindcss/forms@0.2.1/dist/forms.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
