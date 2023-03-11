@@ -4,6 +4,7 @@ import Register from "../views/Register/index.vue";
 import Home from "../views/HomeView.vue";
 import StepAccountRegister from "../views/Register/StepAccount.vue";
 import StepPersonalRegister from "../views/Register/StepPersonal.vue";
+import StepVerificationRegister from "../views/Register/StepVerification.vue";
 
 Vue.use(VueRouter);
 
@@ -27,6 +28,10 @@ const router = new VueRouter({
         {
           path: "personal",
           component: StepPersonalRegister,
+        },
+        {
+          path: "verification",
+          component: StepVerificationRegister,
         },
       ],
     },

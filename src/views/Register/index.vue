@@ -12,6 +12,7 @@ export default {
     return {
       LogoTrutik,
       IconSmartHome: markRaw(IconSmartHome),
+      path: this.$router.currentRoute.path.split("/")[2],
       stepperPath: [
         {
           step: 1,
@@ -38,10 +39,9 @@ export default {
   },
   computed: {
     currentStep() {
-      const path = this.$router.currentRoute.path.split("/")[2];
       const step = this.stepperPath
         .map((stepper) => stepper.path)
-        .indexOf(path);
+        .indexOf(this.path);
       return step;
     },
   },
@@ -57,6 +57,7 @@ export default {
         this.$router.push(
           `/register/${this.stepperPath[this.currentStep - 1].path}`
         );
+        this.path = this.$router.currentRoute.path.split("/")[2];
         window.scrollTo(0, 0);
       }
     },
@@ -66,6 +67,7 @@ export default {
         this.$router.push(
           `/register/${this.stepperPath[this.currentStep + 1].path}`
         );
+        this.path = this.$router.currentRoute.path.split("/")[2];
         window.scrollTo(0, 0);
       }
     },
