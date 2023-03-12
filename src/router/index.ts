@@ -1,10 +1,10 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import Register from "../views/Register/index.vue";
-import Home from "../views/HomeView.vue";
 import StepAccountRegister from "../views/Register/StepAccount.vue";
 import StepPersonalRegister from "../views/Register/StepPersonal.vue";
 import StepVerificationRegister from "../views/Register/StepVerification.vue";
+import StepCreationRegister from "../views/Register/StepCreation.vue";
 
 Vue.use(VueRouter);
 
@@ -32,6 +32,10 @@ const router = new VueRouter({
         {
           path: "verification",
           component: StepVerificationRegister,
+        },
+        {
+          path: "creation",
+          component: StepCreationRegister,
         },
       ],
     },
