@@ -247,11 +247,13 @@ export default {
           <Calendar />
         </div>
         <div class="w-[1px] border-r border-neutral-30"></div>
-        <div class="flex-grow w-[40%] grid grid-cols-3 gap-[0.75rem]">
+        <div
+          class="flex-grow w-[40%] grid grid-cols-[repeat(auto-fit,_minmax(80px,_1fr))] gap-[0.75rem]"
+        >
           <button
             v-for="n in time.length"
             :key="n"
-            :class="`border rounded-lg align-center text-center px-[1.375rem] py-[0.75rem] ${getStyleBorderTime(
+            :class="`border rounded-lg align-center text-center ${getStyleBorderTime(
               time[n - 1]
             )} ${getStyleTextTime(time[n - 1])}`"
             @click="() => onClickTime(time[n - 1])"
